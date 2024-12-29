@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e; /* Dark mode by default */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #444;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+/* Centered Logo with Background Blend */
+.logo {
+    display: block;
+    width: 120px; /* Adjust as needed */
+    height: 120px;
+    margin: 0 auto 20px; /* Center the logo horizontally */
+    border-radius: 50%; /* Circle shape */
+    background-image: url('images/starlink.jpeg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for blending */
+    opacity: 0.9; /* Slight transparency for blending */
+}
+
+/* Headings */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Input Container */
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: white;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #2883a7;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #197aa3;
+}
+
+/* Status */
+.status-active { color: green; }
+.status-expired { color: red; }
+
+/* Social Links */
+.social-links a {
+    color: white;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-switch {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2883a7;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+body.light-mode {
+    background-color: #f4f4f4;
+    color: black;
+}
+
+body.light-mode .container {
+    background-color: white;
+}
+
+body.light-mode input[type="text"], 
+body.light-mode select {
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+}
+
+body.light-mode button[type="submit"] {
+    background-color: #555;
+}
+
+body.light-mode button[type="submit"]:hover {
+    background-color: #444;
+}
+/* Subscription Container */
+.subscription-container {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.subscription-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.subscription-option {
+    position: relative;
+    width: 120px;
+    padding: 15px;
+    text-align: center;
+    border: 2px solid #555;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.subscription-option input[type="radio"] {
+    display: none;
+}
+
+.subscription-option span {
+    font-size: 14px;
+}
+
+.subscription-option input[type="radio"]:checked + span {
+    font-weight: bold;
+    color: #2883a7;
+}
+
+.subscription-option input[type="radio"]:checked + span::before {
+    content: "✓ ";
+    color: #2883a7;
+}
