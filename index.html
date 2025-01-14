@@ -14,7 +14,7 @@
     <div class="container">
       <img class="logo" src="images/starlink.jpeg" alt="Starlink Logo" />
       <h1>StarlinkNet</h1>
-      
+
       <!-- Dark Mode Switch -->
       <div class="dark-mode-switch">
         <label class="switch">
@@ -22,51 +22,49 @@
           <span class="slider"></span>
         </label>
       </div>
+
       <!-- Login Form -->
       <form id="signinForm">
-       <!--  <div class="input-container">
-          <input type="text" id="username" placeholder="Username" required />
-        </div>-->
         <div class="input-container">
           <input type="text" id="phone" placeholder="Phone Number" required />
-        <!-- Subscription Plan Selection -->
-<!-- Subscription Plan Selection -->
-<div class="subscription-container">
-  <label>Select Subscription Plan:</label>
-  <div class="subscription-options">
-    <label class="subscription-option">
-      <input type="radio" name="subscription" value="daily" required />
-      <span>Daily @ 50/</span>
-    </label>
-    <label class="subscription-option">
-      <input type="radio" name="subscription" value="weekly" required />
-      <span>Weekly @ 300/</span>
-    </label>
-    <label class="subscription-option">
-      <input type="radio" name="subscription" value="biweekly" required />
-      <span>Bi-Weekly @ 550/</span>
-    </label>
-    <label class="subscription-option">
-      <input type="radio" name="subscription" value="monthly" required />
-      <span>Monthly @ 1,500/</span>
-    </label>
-    <label class="subscription-option">
-      <input type="radio" name="subscription" value="annual" required />
-      <span>Annual @ 12,000/</span>
-    </label>
-  </div>
-</div>
+        </div>
 
+        <!-- Subscription Plan Selection -->
+        <div class="subscription-container">
+          <label>Select Subscription Plan:</label>
+          <div class="subscription-options">
+            <label class="subscription-option">
+              <input type="radio" name="subscription" value="daily" required />
+              <span>Daily @ 50/</span>
+            </label>
+            <label class="subscription-option">
+              <input type="radio" name="subscription" value="weekly" required />
+              <span>Weekly @ 300/</span>
+            </label>
+            <label class="subscription-option">
+              <input type="radio" name="subscription" value="biweekly" required />
+              <span>Bi-Weekly @ 550/</span>
+            </label>
+            <label class="subscription-option">
+              <input type="radio" name="subscription" value="monthly" required />
+              <span>Monthly @ 1,500/</span>
+            </label>
+            <label class="subscription-option">
+              <input type="radio" name="subscription" value="annual" required />
+              <span>Annual @ 12,000/</span>
+            </label>
+          </div>
+        </div>
 
         <h2 id="status">Status: <span id="statusText" class="status-active">Expired</span></h2>
-        
+
         <button type="submit">Pay/Connect</button>
 
         <div>
-          <input type="checkbox" id="keepmeloggedin" checked> Stay Connected
+          <input type="checkbox" id="keepmeloggedin" checked /> Stay Connected
         </div>
         <div>
-          <input type="checkbox" id="promonotifications" checked> Receive promo notifications
+          <input type="checkbox" id="promonotifications" checked /> Receive promo notifications
         </div>
       </form>
 

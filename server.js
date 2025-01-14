@@ -81,3 +81,24 @@ app.listen(port, '0.0.0.0', () => {
     console.log(`Server running on port ${port}`);
 });
 
+document.getElementById("signinForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+  
+    const phone = document.getElementById("phone").value;
+    const plan = document.querySelector("input[name='subscription']:checked").value;
+  
+    try {
+      const response = await fetch("http://localhost:5000/stkpush", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phone, plan }),
+      });
+  
+      const message = await response.text();
+      alert(message);
+    } catch (error) {
+      console.error("Error:", error);
+      alert("❌ An error occurred. Please try again.");
+    }
+  });
+  
