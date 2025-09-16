@@ -9,6 +9,109 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shooting Stars Background */
+.shooting-stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: linear-gradient(45deg, #fff, transparent);
+    border-radius: 50%;
+    animation: shoot 3s linear infinite;
+}
+
+.shooting-star::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+    transform: translateY(-50%);
+}
+
+.shooting-star:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 2s;
+}
+
+.shooting-star:nth-child(2) {
+    top: 20%;
+    left: 20%;
+    animation-delay: 0.5s;
+    animation-duration: 2.5s;
+}
+
+.shooting-star:nth-child(3) {
+    top: 30%;
+    left: 30%;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+
+.shooting-star:nth-child(4) {
+    top: 40%;
+    left: 40%;
+    animation-delay: 1.5s;
+    animation-duration: 2.2s;
+}
+
+.shooting-star:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    animation-delay: 2s;
+    animation-duration: 2.8s;
+}
+
+.shooting-star:nth-child(6) {
+    top: 60%;
+    left: 60%;
+    animation-delay: 2.5s;
+    animation-duration: 2.3s;
+}
+
+.shooting-star:nth-child(7) {
+    top: 15%;
+    left: 70%;
+    animation-delay: 3s;
+    animation-duration: 2.7s;
+}
+
+.shooting-star:nth-child(8) {
+    top: 25%;
+    left: 80%;
+    animation-delay: 3.5s;
+    animation-duration: 2.1s;
+}
+
+@keyframes shoot {
+    0% {
+        transform: translateX(0) translateY(0) rotate(45deg);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(300px) translateY(300px) rotate(45deg);
+        opacity: 0;
+    }
 }
 
 .container {
@@ -18,6 +121,9 @@ body {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     width: 400px;
     text-align: center;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(1px);
 }
 
 /* Centered Logo with Background Blend */
